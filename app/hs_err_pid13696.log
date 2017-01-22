@@ -1,0 +1,116 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 8192 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=13696, tid=2604
+#
+# JRE version:  (8.0_91-b15) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.91-b15 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000000c7e000):  JavaThread "Unknown thread" [_thread_in_vm, id=2604, stack(0x0000000002500000,0x0000000002600000)]
+
+Stack: [0x0000000002500000,0x0000000002600000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x0000000000c7e000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=2604, stack(0x0000000002500000,0x0000000002600000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000000000c7cb20] SymbolTable_lock - owner thread: 0x0000000000c7e000
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff73c420000 - 0x00007ff73c457000 	C:\Program Files\Java\jdk1.8.0_91\bin\java.exe
+0x00007ff9f8b30000 - 0x00007ff9f8cf1000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ff9f61d0000 - 0x00007ff9f627d000 	C:\WINDOWS\system32\KERNEL32.DLL
+0x00007ff9f5aa0000 - 0x00007ff9f5c88000 	C:\WINDOWS\system32\KERNELBASE.dll
+0x00007ff9f8920000 - 0x00007ff9f89c7000 	C:\WINDOWS\system32\ADVAPI32.dll
+0x00007ff9f6630000 - 0x00007ff9f66cd000 	C:\WINDOWS\system32\msvcrt.dll
+0x00007ff9f88b0000 - 0x00007ff9f890b000 	C:\WINDOWS\system32\sechost.dll
+0x00007ff9f5f40000 - 0x00007ff9f605c000 	C:\WINDOWS\system32\RPCRT4.dll
+0x00007ff9f89d0000 - 0x00007ff9f8b26000 	C:\WINDOWS\system32\USER32.dll
+0x00007ff9f64a0000 - 0x00007ff9f6626000 	C:\WINDOWS\system32\GDI32.dll
+0x00007ff9edb80000 - 0x00007ff9eddf4000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.10586.672_none_a2d6b3cea53ff843\COMCTL32.dll
+0x00007ff9f68f0000 - 0x00007ff9f6b6d000 	C:\WINDOWS\system32\combase.dll
+0x00007ff9f5c90000 - 0x00007ff9f5cfa000 	C:\WINDOWS\system32\bcryptPrimitives.dll
+0x00007ff9f6190000 - 0x00007ff9f61cb000 	C:\WINDOWS\system32\IMM32.DLL
+0x0000000077da0000 - 0x0000000077e72000 	C:\Program Files\Java\jdk1.8.0_91\jre\bin\msvcr100.dll
+0x0000000050360000 - 0x0000000050bf3000 	C:\Program Files\Java\jdk1.8.0_91\jre\bin\server\jvm.dll
+0x00007ff9f5f30000 - 0x00007ff9f5f38000 	C:\WINDOWS\system32\PSAPI.DLL
+0x00007ff9ec9b0000 - 0x00007ff9ec9b9000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ff9f6280000 - 0x00007ff9f62eb000 	C:\WINDOWS\system32\WS2_32.dll
+0x00007ff9f3850000 - 0x00007ff9f3873000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ff9eaaa0000 - 0x00007ff9eaaaa000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ff9f3820000 - 0x00007ff9f384c000 	C:\WINDOWS\SYSTEM32\WINMMBASE.dll
+0x00007ff9f5a30000 - 0x00007ff9f5a73000 	C:\WINDOWS\system32\cfgmgr32.dll
+0x0000000050270000 - 0x000000005027f000 	C:\Program Files\Java\jdk1.8.0_91\jre\bin\verify.dll
+0x0000000050240000 - 0x0000000050269000 	C:\Program Files\Java\jdk1.8.0_91\jre\bin\java.dll
+0x0000000050220000 - 0x0000000050236000 	C:\Program Files\Java\jdk1.8.0_91\jre\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Djava.awt.headless=true -Xmx1024M -Dfile.encoding=x-windows-949 -Duser.country=KR -Duser.language=ko -Duser.variant 
+java_command: com.android.dx.command.Main --dex --force-jumbo --num-threads=4 --output C:\AndroidWorkspace\SmartTabLayout-master\Beacon\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.4.0_c214dba18fec473cb0feb54a85b8cca3d0468610.jar C:\AndroidWorkspace\SmartTabLayout-master\Beacon\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar
+java_class_path (initial): C:\Users\androidsdk\sdk\build-tools\24.0.0\lib\dx.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_91
+PATH=C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\OrCAD\OrCAD_16.6_Lite\tools\bin;C:\OrCAD\OrCAD_16.6_Lite\tools\specctra\bin;C:\OrCAD\OrCAD_16.6_Lite\tools\PSpice;C:\OrCAD\OrCAD_16.6_Lite\tools\Capture;C:\OrCAD\OrCAD_16.6_Lite\tools\fet\bin;C:\OrCAD\OrCAD_16.6_Lite\tools\pcb\bin;C:\OrCAD\OrCAD_16.6_Lite\OpenAccess\bin\win32\opt;C:\Users\¹Ò¼®\AppData\Local\bin\NASM;C;\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\WINDOWS\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Git\cmd;C:\OrCAD\OrCAD_16.6_Lite\OpenAccess\bin\win32\opt;C:\OrCAD\OrCAD_16.6_Lite\tools\pcb\bin;C:\OrCAD\OrCAD_16.6_Lite\tools\fet\bin;C:\OrCAD\OrCAD_16.6_Lite\tools\Capture;C:\OrCAD\OrCAD_16.6_Lite\tools\PSpice;C:\OrCAD\OrCAD_16.6_Lite\tools\specctra\bin;C:\OrCAD\OrCAD_16.6_Lite\tools\bin;
+USERNAME=¹Ò¼®
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 10586 (10.0.10586.589)
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 58 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, clmul, erms, ht, tsc, tscinvbit, tscinv
+
+Memory: 4k page, physical 4050380k(461648k free), swap 14594108k(7624k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.91-b15) for windows-amd64 JRE (1.8.0_91-b15), built on May 20 2016 17:43:15 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Fri Jan 13 22:53:29 2017
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
